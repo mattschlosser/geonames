@@ -1,11 +1,12 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, property, model} from '@loopback/repository';
 
 @model()
 export class AlternatePlaces extends Entity {
   @property({
     type: 'number',
     id: true,
-    generated: true,
+    generated: false,
+    required: true
   })
   alternateNameId?: number;
 

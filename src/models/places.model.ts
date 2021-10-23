@@ -1,4 +1,5 @@
-import {Entity, model, property} from '@loopback/repository';
+import {Entity, model, property, hasMany} from '@loopback/repository';
+import {AlternatePlaces} from './alternate-places.model';
 
 @model()
 export class Places extends Entity {
@@ -55,6 +56,8 @@ export class Places extends Entity {
   })
   cc2?: string;
 
+  @hasMany(() => AlternatePlaces, {keyTo: 'geonameid'})
+  alternatePlaces: AlternatePlaces[];
 
   constructor(data?: Partial<Places>) {
     super(data);
