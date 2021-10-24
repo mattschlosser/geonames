@@ -1,5 +1,7 @@
 # cotw
 
+This project serves a simple geonames api once the data has been loaded into a sqlite database using [these scripts](https://github.com/mattschlosser/cotw-bash-scripts)
+
 This application is generated using [LoopBack 4 CLI](https://loopback.io/doc/en/lb4/Command-line-interface.html) with the
 [initial project layout](https://loopback.io/doc/en/lb4/Loopback-application-layout.html).
 
