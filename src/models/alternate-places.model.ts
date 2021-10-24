@@ -19,7 +19,7 @@ export class AlternatePlaces extends Entity {
 
   @property({
     type: 'string',
-    name: 'isoLanguage'
+    name: 'isolanguage'
   })
   isoLanguage?: string;
 
