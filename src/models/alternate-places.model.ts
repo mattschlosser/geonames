@@ -1,4 +1,4 @@
-import {Entity, property, model} from '@loopback/repository';
+import {Entity, model, property} from '@loopback/repository';
 
 @model()
 export class AlternatePlaces extends Entity {
@@ -6,7 +6,8 @@ export class AlternatePlaces extends Entity {
     type: 'number',
     id: true,
     generated: false,
-    required: true
+    required: true,
+    name: 'alternateNameId'
   })
   alternateNameId?: number;
 
@@ -18,6 +19,7 @@ export class AlternatePlaces extends Entity {
 
   @property({
     type: 'string',
+    name: 'isoLanguage'
   })
   isoLanguage?: string;
 
@@ -29,21 +31,25 @@ export class AlternatePlaces extends Entity {
 
   @property({
     type: 'string',
+    name: 'isPreferredName'
   })
   isPreferredName?: string;
 
   @property({
     type: 'string',
+    name: 'isShortName'
   })
   isShortName?: string;
 
   @property({
     type: 'string',
+    name: 'isShortName'
   })
   isColloquial?: string;
 
   @property({
     type: 'boolean',
+    name: 'isShortName'
   })
   isHistoric?: boolean;
 
