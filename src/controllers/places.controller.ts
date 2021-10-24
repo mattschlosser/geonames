@@ -4,13 +4,11 @@ import {
   Filter,
   FilterExcludingWhere,
   repository,
-  Where,
+  Where
 } from '@loopback/repository';
 import {
-  param,
   get,
-  getModelSchemaRef,
-  response,
+  getModelSchemaRef, param, response
 } from '@loopback/rest';
 import {Places} from '../models';
 import {PlacesRepository} from '../repositories';
@@ -40,6 +38,7 @@ export class PlacesController {
         schema: {
           type: 'array',
           items: getModelSchemaRef(Places, {includeRelations: true}),
+          maxItems: 2000
         },
       },
     },
