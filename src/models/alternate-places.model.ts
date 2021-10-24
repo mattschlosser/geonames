@@ -31,35 +31,41 @@ export class AlternatePlaces extends Entity {
 
   @property({
     type: 'string',
-    name: 'isPreferredName'
+    name: 'isPreferredName',
+    nullable: true
   })
-  isPreferredName?: string;
+  isPreferredName?: boolean;
 
   @property({
     type: 'string',
-    name: 'isShortName'
+    name: 'isShortName',
+    nullable: true
   })
-  isShortName?: string;
+  isShortName?: boolean;
 
   @property({
     type: 'string',
-    name: 'isShortName'
+    name: 'isColloquial',
+    nullable: true
   })
-  isColloquial?: string;
+  isColloquial?: boolean;
 
   @property({
     type: 'boolean',
-    name: 'isShortName'
+    name: 'isShortName',
+    nullable: true
   })
   isHistoric?: boolean;
 
   @property({
     type: 'string',
+    nullable: true
   })
   from?: string;
 
   @property({
     type: 'string',
+    nullable: true
   })
   to?: string;
 
